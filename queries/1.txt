@@ -1,0 +1,1 @@
+SELECT CONCAT(a.fName, ' ', a.mName, ' ', a.lName) AS fullName, SUM(c.requestedQty) AS requestedQty, b.title FROM tbl_customer_info a JOIN tbl_rents_info c ON a.id = c.tbl_customer_info_id JOIN tbl_movie_info b ON b.id = c.tbl_movie_info_id GROUP BY fullName, b.title;
